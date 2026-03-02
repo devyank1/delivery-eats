@@ -18,13 +18,74 @@ public class Order {
     @OneToOne
     @JoinColumn(name = "restaurant_id")
     private Restaurant restaurantId;
-    @OneToOne
-    @JoinColumn(name = "driver_id")
-    private Driver driverId;
     @Enumerated(EnumType.STRING)
     private OrderStatus orderStatus;
     private String deliveryAddress;
     private Double totalPrice;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+
+    public String getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
+    }
+
+    public User getUserId() {
+        return userId;
+    }
+
+    public void setUserId(User userId) {
+        this.userId = userId;
+    }
+
+    public Restaurant getRestaurantId() {
+        return restaurantId;
+    }
+
+    public void setRestaurantId(Restaurant restaurantId) {
+        this.restaurantId = restaurantId;
+    }
+
+    public OrderStatus getOrderStatus() {
+        return orderStatus;
+    }
+
+    public void setOrderStatus(OrderStatus orderStatus) {
+        this.orderStatus = orderStatus;
+    }
+
+    public String getDeliveryAddress() {
+        return deliveryAddress;
+    }
+
+    public void setDeliveryAddress(String deliveryAddress) {
+        this.deliveryAddress = deliveryAddress;
+    }
+
+    public Double getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(Double totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+    }
 }
