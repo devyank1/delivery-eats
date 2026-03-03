@@ -1,6 +1,7 @@
 package com.develop.deliveryeats.model;
 
 import com.develop.deliveryeats.enums.OrderStatus;
+import com.develop.deliveryeats.enums.PaymentMethod;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -24,6 +25,8 @@ public class Order {
     private Double totalPrice;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+    @Enumerated(EnumType.STRING)
+    private PaymentMethod paymentMethod;
 
     public String getOrderId() {
         return orderId;
@@ -87,5 +90,13 @@ public class Order {
 
     public void setUpdatedAt(LocalDateTime updatedAt) {
         this.updatedAt = updatedAt;
+    }
+
+    public PaymentMethod getPaymentMethod() {
+        return paymentMethod;
+    }
+
+    public void setPaymentMethod(PaymentMethod paymentMethod) {
+        this.paymentMethod = paymentMethod;
     }
 }
