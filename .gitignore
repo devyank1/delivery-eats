@@ -37,3 +37,6 @@ build/
 
 ### INIT ###
 init.sql
+
+### YML ###
+application.yml
