@@ -13,9 +13,9 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String orderId;
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "user_id")
-    private User userId;
+    private User user;
     @OneToOne
     @JoinColumn(name = "restaurant_id")
     private Restaurant restaurantId;
@@ -37,11 +37,11 @@ public class Order {
     }
 
     public User getUserId() {
-        return userId;
+        return user;
     }
 
     public void setUserId(User userId) {
-        this.userId = userId;
+        this.user = userId;
     }
 
     public Restaurant getRestaurantId() {
