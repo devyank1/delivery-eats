@@ -9,10 +9,10 @@ public class OrderItem {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String orderItemId;
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "order_id")
     private Order orderId;
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "menuitem_id")
     private MenuItem menuItemId;
     private Long quantity;

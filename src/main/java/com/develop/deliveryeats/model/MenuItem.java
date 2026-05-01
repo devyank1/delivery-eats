@@ -8,7 +8,7 @@ public class MenuItem {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String menuItemId;
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "restaurant_id")
     private Restaurant restaurantId;
     private String name;

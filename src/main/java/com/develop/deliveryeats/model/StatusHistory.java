@@ -11,7 +11,7 @@ public class StatusHistory {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String statusHistoryId;
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "order_id")
     private Order orderId;
     private String fromStatus;
