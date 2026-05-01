@@ -31,3 +31,12 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### ENV ###
+.env*
+
+### INIT ###
+init.sql
+
+### YML ###
+application.yml
